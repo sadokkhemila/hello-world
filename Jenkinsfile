@@ -36,7 +36,7 @@ pipeline {
                     ]
                 ],
                 credentialsId: 'nexus-cred',
-                groupId: 'in.javahome', 
+                groupId: 'com.example.maven-project', 
                 nexusUrl: '51.38.50.55:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
