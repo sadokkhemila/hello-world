@@ -7,7 +7,7 @@ pipeline {
         stage("Clone code from CVS") {
             steps {
                 
-                     git branch: 'main', url: 'https://github.com/sadokkhemila/mecen.ai.git'
+                     git branch: 'main', url: 'https://github.com/sadokkhemila/hello-world.git'
                 
             }
          }
