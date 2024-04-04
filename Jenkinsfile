@@ -3,6 +3,14 @@ pipeline {
     tools {
         maven "maven"
     }
+    environment {
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "http://51.38.50.55:8081/"
+        NEXUS_REPOSITORY = "testmaven"
+        NEXUS_CREDENTIAL_ID = "nexus-cred"
+        SCANNER_HOME = tool 'sonar-scanner'
+    }
     stages {
         stage("Clone code from CVS") {
             steps {
