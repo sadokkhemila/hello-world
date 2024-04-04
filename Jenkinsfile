@@ -42,7 +42,7 @@ pipeline {
                 nexusVersion: NEXUS_VERSION, 
                 protocol: NEXUS_PROTOCOL, 
                 repository: 'http://51.38.50.55:8081/repository/testmaven/', 
-                version: '1.0.0'
+                version: '1.0-SNAPSHOT'
             }
         }
     }
