@@ -6,7 +6,7 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "http://51.38.50.55:8081/"
+        NEXUS_URL = "51.38.50.55:8081"
         NEXUS_REPOSITORY = "testmaven"
         NEXUS_CREDENTIAL_ID = "nexus-cred"
         SCANNER_HOME = tool 'sonar-scanner'
@@ -29,18 +29,18 @@ pipeline {
                 nexusArtifactUploader artifacts: [
 
                     [
-                        artifactId: 'simple-app',
+                        artifactId: 'maven-project',
                         classifier: '',
-                        file: 'target/simple-app-1.0.0.war',
+                        file: 'target/maven-project-1.0.0.war',
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'nexus-connex',
+                credentialsId: 'nexus-cred',
                 groupId: 'in.javahome', 
-                nexusUrl: '3.88.191.212:8081', 
+                nexusUrl: '51.38.50.55:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'http://3.88.191.212:8081/repository/test-maven', 
+                repository: 'http://51.38.50.55:8081/repository/testmaven/', 
                 version: '1.0.0'
             }
         }
