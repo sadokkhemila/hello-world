@@ -35,11 +35,11 @@ pipeline {
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'nexus-cred',
+                credentialsId: NEXUS_CREDENTIAL_ID,
                 groupId: 'com.example.maven-project', 
-                nexusUrl: '51.38.50.55:8081', 
-                nexusVersion: 'nexus3', 
-                protocol: 'http', 
+                nexusUrl: NEXUS_URL, 
+                nexusVersion: NEXUS_VERSION, 
+                protocol: NEXUS_PROTOCOL, 
                 repository: 'http://51.38.50.55:8081/repository/testmaven/', 
                 version: '1.0.0'
             }
